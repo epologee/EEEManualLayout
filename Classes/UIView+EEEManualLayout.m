@@ -118,6 +118,7 @@
     {
         if ([subview isKindOfClass:[NSNumber class]])
         {
+            rowFrame.origin.y += [(NSNumber *)(id)subview floatValue];
             continue;
         }
 
