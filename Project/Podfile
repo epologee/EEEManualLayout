@@ -1,0 +1,9 @@
+platform :ios, '7.0'
+
+target "EEEManualLayout" do
+  pod "EEEManualLayout", :path => "../EEEManualLayout.podspec"
+end
+
+target "EEEManualLayoutTests" do
+    pod "Kiwi/XCTest"
+end
