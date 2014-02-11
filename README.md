@@ -1,7 +1,7 @@
 # EEEManualLayout
-
-[![Version](http://cocoapod-badges.herokuapp.com/v/EEEManualLayout/badge.png)](http://cocoadocs.org/docsets/EEEManualLayout)
-[![Platform](http://cocoapod-badges.herokuapp.com/p/EEEManualLayout/badge.png)](http://cocoadocs.org/docsets/EEEManualLayout)
+<!-- [![Version](http://cocoapod-badges.herokuapp.com/v/EEEManualLayout/badge.png)](http://cocoadocs.org/docsets/EEEManualLayout)
+[![Platform](http://cocoapod-badges.herokuapp.com/p/EEEManualLayout/badge.png)](http://cocoadocs.org/docsets/EEEManualLayout) -->
+For when Cocoa's Auto Layout is a bit too ... automatic!
 
 ## Usage
 
