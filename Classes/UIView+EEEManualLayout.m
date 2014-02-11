@@ -4,59 +4,59 @@
 
 @implementation UIView (TTTLayout)
 
-- (void)ttt_setOrigin:(CGPoint)origin
+- (void)eee_setOrigin:(CGPoint)origin
 {
     CGRect frame = self.frame;
     frame.origin = origin;
     self.frame = frame;
 }
 
-- (CGPoint)ttt_origin
+- (CGPoint)eee_origin
 {
     return self.frame.origin;
 }
 
-- (void)ttt_setSize:(CGSize)size
+- (void)eee_setSize:(CGSize)size
 {
     CGRect frame = self.frame;
     frame.size = size;
     self.frame = frame;
 }
 
-- (CGSize)ttt_size
+- (CGSize)eee_size
 {
     return self.frame.size;
 }
 
-- (void)ttt_addSubviews:(NSArray *)array
+- (void)eee_addSubviews:(NSArray *)array
 {
     [array enumerateObjectsUsingBlock:^(UIView *view, NSUInteger idx, BOOL *stop) {
         [self addSubview:view];
     }];
 }
 
-- (CGRect)ttt_resetIntrinsicContentFrame
+- (CGRect)eee_resetIntrinsicContentFrame
 {
-    self.frame = [self ttt_intrinsicContentFrame];
+    self.frame = [self eee_intrinsicContentFrame];
     return self.frame;
 }
 
-- (CGRect)ttt_intrinsicContentFrame
+- (CGRect)eee_intrinsicContentFrame
 {
     return (CGRect) {self.frame.origin, self.intrinsicContentSize};
 }
 
-- (CGRect)ttt_frameThatFitsWidth:(CGFloat)width
+- (CGRect)eee_frameThatFitsWidth:(CGFloat)width
 {
     return (CGRect){self.frame.origin, [self sizeThatFits:CGSizeMake(width, 0)]};
 }
 
-- (CGRect)ttt_distributeViewsHorizontally:(NSArray *)views inFrame:(CGRect)containerFrame withSpacing:(CGFloat)spacing
+- (CGRect)eee_distributeViewsHorizontally:(NSArray *)views inFrame:(CGRect)containerFrame withSpacing:(CGFloat)spacing
 {
-    return [self ttt_distributeViewsHorizontally:views inFrame:containerFrame withSpacing:spacing alignment:EEEDistributeAlignCenter];
+    return [self eee_distributeViewsHorizontally:views inFrame:containerFrame withSpacing:spacing alignment:EEEDistributeAlignCenter];
 }
 
-- (CGRect)ttt_distributeViewsHorizontally:(NSArray *)views inFrame:(CGRect)containerFrame withSpacing:(CGFloat)spacing alignment:(EEEDistributeAlign)alignment
+- (CGRect)eee_distributeViewsHorizontally:(NSArray *)views inFrame:(CGRect)containerFrame withSpacing:(CGFloat)spacing alignment:(EEEDistributeAlign)alignment
 {
     CGRect unionFrame = CGRectZero;
     {
@@ -72,7 +72,7 @@
 
         switch (alignment)
         {
-            case TTTDistributeAlignLeft:
+            case EEEDistributeAlignLeft:
                 anchorFrame.size.width = 0;
                 break;
 
@@ -80,7 +80,7 @@
                 anchorFrame.size.width = (containerFrame.size.width - requiredWidth) / 2;
                 break;
 
-            case TTTDistributeAlignRight:
+            case EEEDistributeAlignRight:
                 anchorFrame.size.width = (containerFrame.size.width - requiredWidth);
                 break;
         }
@@ -102,12 +102,12 @@
     return unionFrame;
 }
 
-- (CGRect)ttt_distributeViews:(NSArray *)views asRowsInFrame:(CGRect)containerFrame withSpacing:(CGFloat)spacing horizontalAlignment:(EEEDistributeAlign)alignment rowLimit:(int)rowLimit
+- (CGRect)eee_distributeViews:(NSArray *)views asRowsInFrame:(CGRect)containerFrame withSpacing:(CGFloat)spacing horizontalAlignment:(EEEDistributeAlign)alignment rowLimit:(int)rowLimit
 {
-    return [self ttt_distributeViews:views asRowsInFrame:containerFrame withSpacing:spacing horizontalAlignment:alignment rowLimit:rowLimit containerAlignment:EEECGAlignNone];
+    return [self eee_distributeViews:views asRowsInFrame:containerFrame withSpacing:spacing horizontalAlignment:alignment rowLimit:rowLimit containerAlignment:EEECGAlignNone];
 }
 
-- (CGRect)ttt_distributeViews:(NSArray *)views asRowsInFrame:(CGRect)containerFrame withSpacing:(CGFloat)spacing horizontalAlignment:(EEEDistributeAlign)alignment rowLimit:(int)rowLimit containerAlignment:(TTTCGAlignOption)containerAlignment
+- (CGRect)eee_distributeViews:(NSArray *)views asRowsInFrame:(CGRect)containerFrame withSpacing:(CGFloat)spacing horizontalAlignment:(EEEDistributeAlign)alignment rowLimit:(int)rowLimit containerAlignment:(EEECGAlignOption)containerAlignment
 {
     __block CGRect result = CGRectZero;
     NSMutableArray *rows = [NSMutableArray array];
@@ -168,7 +168,7 @@
         }
     }
 
-    if (alignment != TTTDistributeAlignLeft)
+    if (alignment != EEEDistributeAlignLeft)
     {
         // re-iterate over the rows objects to align horizontally
         result = CGRectZero;
@@ -183,7 +183,7 @@
                 case EEEDistributeAlignCenter:
                     offsetX = (containerFrame.size.width - frame.size.width) / 2.0;
                     break;
-                case TTTDistributeAlignRight:
+                case EEEDistributeAlignRight:
                     offsetX = containerFrame.size.width - frame.size.width;
                     break;
             }
@@ -224,7 +224,7 @@
     return result;
 }
 
-- (NSString *)ttt_hierarchy:(NSString *)leading
+- (NSString *)eee_hierarchy:(NSString *)leading
 {
     NSMutableString *s = [NSMutableString string];
     if (!leading) leading = @"";
@@ -236,7 +236,7 @@
         for (UIView *subview in self.subviews)
         {
             NSString *l = [leading stringByAppendingString:@"  |"];
-            [s appendFormat:@"%@", [subview ttt_hierarchy:l]];
+            [s appendFormat:@"%@", [subview eee_hierarchy:l]];
         }
         [s appendFormat:@"\n%@", leading];
     }

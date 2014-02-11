@@ -1,33 +1,33 @@
 #import <Foundation/Foundation.h>
-#import "TTTCGUtils.h"
+#import "EEEManualLayout.h"
 
 typedef enum {
-    TTTDistributeAlignLeft,
+    EEEDistributeAlignLeft,
     EEEDistributeAlignCenter,
-    TTTDistributeAlignRight
+    EEEDistributeAlignRight
 } EEEDistributeAlign;
 
 @interface UIView (TTTLayout)
 
-@property (setter = ttt_setOrigin:) CGPoint ttt_origin;
-@property (setter = ttt_setSize:) CGSize ttt_size;
+@property (setter = eee_setOrigin:) CGPoint eee_origin;
+@property (setter = eee_setSize:) CGSize eee_size;
 
-- (void)ttt_addSubviews:(NSArray *)array;
+- (void)eee_addSubviews:(NSArray *)array;
 
-- (CGRect)ttt_resetIntrinsicContentFrame;
+- (CGRect)eee_resetIntrinsicContentFrame;
 
-- (CGRect)ttt_intrinsicContentFrame;
+- (CGRect)eee_intrinsicContentFrame;
 
-- (CGRect)ttt_frameThatFitsWidth:(CGFloat)width;
+- (CGRect)eee_frameThatFitsWidth:(CGFloat)width;
 
-- (CGRect)ttt_distributeViewsHorizontally:(NSArray *)views inFrame:(CGRect)containerFrame withSpacing:(CGFloat)spacing;
+- (CGRect)eee_distributeViewsHorizontally:(NSArray *)views inFrame:(CGRect)containerFrame withSpacing:(CGFloat)spacing;
 
-- (CGRect)ttt_distributeViewsHorizontally:(NSArray *)views inFrame:(CGRect)containerFrame withSpacing:(CGFloat)spacing alignment:(EEEDistributeAlign)alignment;
+- (CGRect)eee_distributeViewsHorizontally:(NSArray *)views inFrame:(CGRect)containerFrame withSpacing:(CGFloat)spacing alignment:(EEEDistributeAlign)alignment;
 
-- (CGRect)ttt_distributeViews:(NSArray *)views asRowsInFrame:(CGRect)containerFrame withSpacing:(CGFloat)spacing horizontalAlignment:(EEEDistributeAlign)alignment rowLimit:(int)rowLimit;
+- (CGRect)eee_distributeViews:(NSArray *)views asRowsInFrame:(CGRect)containerFrame withSpacing:(CGFloat)spacing horizontalAlignment:(EEEDistributeAlign)alignment rowLimit:(int)rowLimit;
 
-- (CGRect)ttt_distributeViews:(NSArray *)views asRowsInFrame:(CGRect)containerFrame withSpacing:(CGFloat)spacing horizontalAlignment:(EEEDistributeAlign)alignment rowLimit:(int)rowLimit containerAlignment:(TTTCGAlignOption)containerAlignment;
+- (CGRect)eee_distributeViews:(NSArray *)views asRowsInFrame:(CGRect)containerFrame withSpacing:(CGFloat)spacing horizontalAlignment:(EEEDistributeAlign)alignment rowLimit:(int)rowLimit containerAlignment:(EEECGAlignOption)containerAlignment;
 
-- (NSString *)ttt_hierarchy:(NSString *)leading;
+- (NSString *)eee_hierarchy:(NSString *)leading;
 
 @end
