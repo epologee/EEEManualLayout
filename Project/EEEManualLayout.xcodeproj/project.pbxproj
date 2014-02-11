@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1C4A7AAA19AD4DB5BF3745CA /* libPods-EEEManualLayout.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EF3246E8C4D64CF59E4223DD /* libPods-EEEManualLayout.a */; };
 		95A63AAE18AA938A0056BC31 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95A63AAD18AA938A0056BC31 /* Foundation.framework */; };
 		95A63AB318AA938A0056BC31 /* EEEManualLayout.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 95A63AB218AA938A0056BC31 /* EEEManualLayout.h */; };
 		95A63AB518AA938A0056BC31 /* EEEManualLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 95A63AB418AA938A0056BC31 /* EEEManualLayout.m */; };
@@ -16,6 +17,7 @@
 		95A63AC218AA938A0056BC31 /* libEEEManualLayout.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 95A63AAA18AA938A0056BC31 /* libEEEManualLayout.a */; };
 		95A63AC818AA938A0056BC31 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 95A63AC618AA938A0056BC31 /* InfoPlist.strings */; };
 		95A63ACA18AA938A0056BC31 /* EEEManualLayoutTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 95A63AC918AA938A0056BC31 /* EEEManualLayoutTests.m */; };
+		A979F4179508424F99B5AE3D /* libPods-EEEManualLayoutTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ECE3E90CB2A548EFBCD55D37 /* libPods-EEEManualLayoutTests.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +44,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		6FC93A0AB159438A970C16C8 /* Pods-EEEManualLayoutTests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EEEManualLayoutTests.xcconfig"; path = "Pods/Pods-EEEManualLayoutTests.xcconfig"; sourceTree = "<group>"; };
+		70D644E94EA34767AAE7C379 /* Pods-EEEManualLayout.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EEEManualLayout.xcconfig"; path = "Pods/Pods-EEEManualLayout.xcconfig"; sourceTree = "<group>"; };
 		95A63AAA18AA938A0056BC31 /* libEEEManualLayout.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libEEEManualLayout.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		95A63AAD18AA938A0056BC31 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		95A63AB118AA938A0056BC31 /* EEEManualLayout-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "EEEManualLayout-Prefix.pch"; sourceTree = "<group>"; };
@@ -53,6 +57,8 @@
 		95A63AC518AA938A0056BC31 /* EEEManualLayoutTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "EEEManualLayoutTests-Info.plist"; sourceTree = "<group>"; };
 		95A63AC718AA938A0056BC31 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		95A63AC918AA938A0056BC31 /* EEEManualLayoutTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EEEManualLayoutTests.m; sourceTree = "<group>"; };
+		ECE3E90CB2A548EFBCD55D37 /* libPods-EEEManualLayoutTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-EEEManualLayoutTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EF3246E8C4D64CF59E4223DD /* libPods-EEEManualLayout.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-EEEManualLayout.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +67,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				95A63AAE18AA938A0056BC31 /* Foundation.framework in Frameworks */,
+				1C4A7AAA19AD4DB5BF3745CA /* libPods-EEEManualLayout.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,6 +79,7 @@
 				95A63AC218AA938A0056BC31 /* libEEEManualLayout.a in Frameworks */,
 				95A63ABF18AA938A0056BC31 /* UIKit.framework in Frameworks */,
 				95A63ABD18AA938A0056BC31 /* Foundation.framework in Frameworks */,
+				A979F4179508424F99B5AE3D /* libPods-EEEManualLayoutTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,6 +93,8 @@
 				95A63AC318AA938A0056BC31 /* EEEManualLayoutTests */,
 				95A63AAC18AA938A0056BC31 /* Frameworks */,
 				95A63AAB18AA938A0056BC31 /* Products */,
+				70D644E94EA34767AAE7C379 /* Pods-EEEManualLayout.xcconfig */,
+				6FC93A0AB159438A970C16C8 /* Pods-EEEManualLayoutTests.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -103,6 +113,8 @@
 				95A63AAD18AA938A0056BC31 /* Foundation.framework */,
 				95A63ABB18AA938A0056BC31 /* XCTest.framework */,
 				95A63ABE18AA938A0056BC31 /* UIKit.framework */,
+				EF3246E8C4D64CF59E4223DD /* libPods-EEEManualLayout.a */,
+				ECE3E90CB2A548EFBCD55D37 /* libPods-EEEManualLayoutTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -150,9 +162,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 95A63ACD18AA938A0056BC31 /* Build configuration list for PBXNativeTarget "EEEManualLayout" */;
 			buildPhases = (
+				B81CA383B1D1444288C646BE /* Check Pods Manifest.lock */,
 				95A63AA618AA938A0056BC31 /* Sources */,
 				95A63AA718AA938A0056BC31 /* Frameworks */,
 				95A63AA818AA938A0056BC31 /* CopyFiles */,
+				B165FA71DBA04EBEB0B9CC5C /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -167,9 +181,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 95A63AD018AA938A0056BC31 /* Build configuration list for PBXNativeTarget "EEEManualLayoutTests" */;
 			buildPhases = (
+				F153802DB6AB4E57AA452A44 /* Check Pods Manifest.lock */,
 				95A63AB618AA938A0056BC31 /* Sources */,
 				95A63AB718AA938A0056BC31 /* Frameworks */,
 				95A63AB818AA938A0056BC31 /* Resources */,
+				220A6F7314944159B826D338 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -218,6 +234,69 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		220A6F7314944159B826D338 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-EEEManualLayoutTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B165FA71DBA04EBEB0B9CC5C /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-EEEManualLayout-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B81CA383B1D1444288C646BE /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		F153802DB6AB4E57AA452A44 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		95A63AA618AA938A0056BC31 /* Sources */ = {
@@ -330,11 +409,11 @@
 		};
 		95A63ACE18AA938A0056BC31 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 70D644E94EA34767AAE7C379 /* Pods-EEEManualLayout.xcconfig */;
 			buildSettings = {
 				DSTROOT = /tmp/EEEManualLayout.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "EEEManualLayout/EEEManualLayout-Prefix.pch";
-				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 			};
@@ -342,11 +421,11 @@
 		};
 		95A63ACF18AA938A0056BC31 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 70D644E94EA34767AAE7C379 /* Pods-EEEManualLayout.xcconfig */;
 			buildSettings = {
 				DSTROOT = /tmp/EEEManualLayout.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "EEEManualLayout/EEEManualLayout-Prefix.pch";
-				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 			};
@@ -354,6 +433,7 @@
 		};
 		95A63AD118AA938A0056BC31 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6FC93A0AB159438A970C16C8 /* Pods-EEEManualLayoutTests.xcconfig */;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -375,6 +455,7 @@
 		};
 		95A63AD218AA938A0056BC31 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6FC93A0AB159438A970C16C8 /* Pods-EEEManualLayoutTests.xcconfig */;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -409,6 +490,7 @@
 				95A63ACF18AA938A0056BC31 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		95A63AD018AA938A0056BC31 /* Build configuration list for PBXNativeTarget "EEEManualLayoutTests" */ = {
 			isa = XCConfigurationList;
@@ -417,6 +499,7 @@
 				95A63AD218AA938A0056BC31 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

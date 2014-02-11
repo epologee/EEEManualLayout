@@ -1,7 +1,6 @@
 #import <CoreGraphics/CoreGraphics.h>
-#import "UIView+TTTLayout.h"
-#import "TTTCGUtils.h"
-#import "TTTLog.h"
+#import "UIView+EEEManualLayout.h"
+#import "EEEManualLayout.h"
 
 @implementation UIView (TTTLayout)
 
@@ -54,10 +53,10 @@
 
 - (CGRect)ttt_distributeViewsHorizontally:(NSArray *)views inFrame:(CGRect)containerFrame withSpacing:(CGFloat)spacing
 {
-    return [self ttt_distributeViewsHorizontally:views inFrame:containerFrame withSpacing:spacing alignment:TTTDistributeAlignCenter];
+    return [self ttt_distributeViewsHorizontally:views inFrame:containerFrame withSpacing:spacing alignment:EEEDistributeAlignCenter];
 }
 
-- (CGRect)ttt_distributeViewsHorizontally:(NSArray *)views inFrame:(CGRect)containerFrame withSpacing:(CGFloat)spacing alignment:(TTTDistributeAlign)alignment
+- (CGRect)ttt_distributeViewsHorizontally:(NSArray *)views inFrame:(CGRect)containerFrame withSpacing:(CGFloat)spacing alignment:(EEEDistributeAlign)alignment
 {
     CGRect unionFrame = CGRectZero;
     {
@@ -77,7 +76,7 @@
                 anchorFrame.size.width = 0;
                 break;
 
-            case TTTDistributeAlignCenter:
+            case EEEDistributeAlignCenter:
                 anchorFrame.size.width = (containerFrame.size.width - requiredWidth) / 2;
                 break;
 
@@ -88,7 +87,7 @@
 
         for (UIView *distributeView in views)
         {
-            anchorFrame = distributeView.frame = CGRectAlignAndPositionNextToRect(distributeView.frame, anchorFrame, CGAlignCenterVertically | CGPositionToTheRight, spacing);
+            anchorFrame = distributeView.frame = EEECGRectAlignAndPositionNextToRect(distributeView.frame, anchorFrame, EEECGAlignCenterVertically | EEECGPositionToTheRight, spacing);
             if (CGRectEqualToRect(unionFrame, CGRectZero))
             {
                 unionFrame = anchorFrame;
@@ -103,12 +102,12 @@
     return unionFrame;
 }
 
-- (CGRect)ttt_distributeViews:(NSArray *)views asRowsInFrame:(CGRect)containerFrame withSpacing:(CGFloat)spacing horizontalAlignment:(TTTDistributeAlign)alignment rowLimit:(int)rowLimit
+- (CGRect)ttt_distributeViews:(NSArray *)views asRowsInFrame:(CGRect)containerFrame withSpacing:(CGFloat)spacing horizontalAlignment:(EEEDistributeAlign)alignment rowLimit:(int)rowLimit
 {
-    return [self ttt_distributeViews:views asRowsInFrame:containerFrame withSpacing:spacing horizontalAlignment:alignment rowLimit:rowLimit containerAlignment:CGAlignNone];
+    return [self ttt_distributeViews:views asRowsInFrame:containerFrame withSpacing:spacing horizontalAlignment:alignment rowLimit:rowLimit containerAlignment:EEECGAlignNone];
 }
 
-- (CGRect)ttt_distributeViews:(NSArray *)views asRowsInFrame:(CGRect)containerFrame withSpacing:(CGFloat)spacing horizontalAlignment:(TTTDistributeAlign)alignment rowLimit:(int)rowLimit containerAlignment:(TTTCGAlignOption)containerAlignment
+- (CGRect)ttt_distributeViews:(NSArray *)views asRowsInFrame:(CGRect)containerFrame withSpacing:(CGFloat)spacing horizontalAlignment:(EEEDistributeAlign)alignment rowLimit:(int)rowLimit containerAlignment:(TTTCGAlignOption)containerAlignment
 {
     __block CGRect result = CGRectZero;
     NSMutableArray *rows = [NSMutableArray array];
@@ -119,7 +118,6 @@
     {
         if ([subview isKindOfClass:[NSNumber class]])
         {
-            ELog(@"Fix this");
             continue;
         }
 
@@ -158,7 +156,7 @@
         }
 
         rowFrames[[rows count] - 1] = [NSValue valueWithCGRect:rowFrame];
-        subview.frame = CGRectRoundToDevicePixels(subviewFrame);
+        subview.frame = EEECGRectRoundToDevicePixels(subviewFrame);
 
         if (CGRectEqualToRect(result, CGRectZero))
         {
@@ -182,7 +180,7 @@
             switch (alignment)
             {
                 default:
-                case TTTDistributeAlignCenter:
+                case EEEDistributeAlignCenter:
                     offsetX = (containerFrame.size.width - frame.size.width) / 2.0;
                     break;
                 case TTTDistributeAlignRight:
@@ -194,7 +192,7 @@
             {
                 CGRect subviewFrame = subview.frame;
                 subviewFrame.origin.x += offsetX;
-                subview.frame = CGRectRoundToDevicePixels(subviewFrame);
+                subview.frame = EEECGRectRoundToDevicePixels(subviewFrame);
 
                 if (CGRectEqualToRect(result, CGRectZero))
                 {
@@ -208,10 +206,10 @@
         }];
     }
 
-    if (containerAlignment != CGAlignNone)
+    if (containerAlignment != EEECGAlignNone)
     {
-        CGRect alignedResult = CGRectAlignToRect(result, containerFrame, containerAlignment);
-        CGPoint offset = CGPointSubtract(alignedResult.origin, result.origin);
+        CGRect alignedResult = EEECGRectAlignToRect(result, containerFrame, containerAlignment);
+        CGPoint offset = EEECGPointSubtract(alignedResult.origin, result.origin);
         result.origin = alignedResult.origin;
 
         for (UIView *view in views)

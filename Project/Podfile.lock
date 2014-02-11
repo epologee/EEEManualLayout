@@ -1,0 +1,21 @@
+PODS:
+  - EEEManualLayout (0.1.0)
+  - Kiwi/ARC (2.2.3)
+  - Kiwi/NonARC (2.2.3)
+  - Kiwi/XCTest (2.2.3):
+    - Kiwi/ARC
+    - Kiwi/NonARC
+
+DEPENDENCIES:
+  - EEEManualLayout (from `../EEEManualLayout.podspec`)
+  - Kiwi/XCTest
+
+EXTERNAL SOURCES:
+  EEEManualLayout:
+    :path: ../EEEManualLayout.podspec
+
+SPEC CHECKSUMS:
+  EEEManualLayout: 949c942c550ccfb338322f3d0dd60114a3664a74
+  Kiwi: 04c51e880831d291748ec702d42c4101f7eb95c9
+
+COCOAPODS: 0.29.0
