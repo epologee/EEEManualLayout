@@ -71,13 +71,13 @@ enum
 typedef EEECGOption EEECGSubtractOption;
 
 /** Trim a CGRect from the top, counter clockwise. */
-extern CGRect CGRectTrim(CGRect rect, CGFloat top, CGFloat left, CGFloat bottom, CGFloat right);
+extern CGRect EEECGRectTrim(CGRect rect, CGFloat top, CGFloat left, CGFloat bottom, CGFloat right);
 
 /** The opposite of CGRectTrim */
-extern CGRect CGRectExpand(CGRect rect, CGFloat top, CGFloat left, CGFloat bottom, CGFloat right);
+extern CGRect EEECGRectExpand(CGRect rect, CGFloat top, CGFloat left, CGFloat bottom, CGFloat right);
 
 /** Trim a CGRect by using UIEdgeInsets. */
-extern CGRect TTTRectWithInsets(CGRect rect, UIEdgeInsets insets);
+extern CGRect EEERectWithInsets(CGRect rect, UIEdgeInsets insets);
 
 /**
 * Replace one or more properties of a rect with a tweaked value.

@@ -50,26 +50,26 @@ CGRect EEECGRectSubtractRect(CGRect subject, CGRect operator, EEECGSubtractOptio
     {
         // Subtract from the left side
         CGFloat left = MAX(CGRectGetMaxX(operator) - CGRectGetMinX(subject), 0);
-        subtracted = CGRectTrim(subject, 0, left, 0, 0);
+        subtracted = EEECGRectTrim(subject, 0, left, 0, 0);
     }
     else if (options & EEECGSubtractFromTheRight)
     {
         // Subtract from the right side
         CGFloat right = MAX(CGRectGetMaxX(subject) - CGRectGetMinX(operator), 0);
-        subtracted = CGRectTrim(subject, 0, 0, 0, right);
+        subtracted = EEECGRectTrim(subject, 0, 0, 0, right);
     }
 
     if (options & EEECGSubtractFromTheTop)
     {
         // Subtract from the top side
         CGFloat top = MAX(CGRectGetMaxY(operator) - CGRectGetMinY(subject), 0);
-        subtracted = CGRectTrim(subject, top, 0, 0, 0);
+        subtracted = EEECGRectTrim(subject, top, 0, 0, 0);
     }
     else if (options & EEECGSubtractFromTheBottom)
     {
         // Subtract from the bottom side
         CGFloat bottom = MAX(CGRectGetMaxY(subject) - CGRectGetMinY(operator), 0);
-        subtracted = CGRectTrim(subject, 0, 0, bottom, 0);
+        subtracted = EEECGRectTrim(subject, 0, 0, bottom, 0);
     }
 
     return subtracted;
