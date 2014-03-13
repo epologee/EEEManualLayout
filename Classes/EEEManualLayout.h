@@ -77,7 +77,7 @@ extern CGRect EEECGRectTrim(CGRect rect, CGFloat top, CGFloat left, CGFloat bott
 extern CGRect EEECGRectExpand(CGRect rect, CGFloat top, CGFloat left, CGFloat bottom, CGFloat right);
 
 /** Trim a CGRect by using UIEdgeInsets. */
-extern CGRect EEERectWithInsets(CGRect rect, UIEdgeInsets insets);
+extern CGRect EEECGRectWithInsets(CGRect rect, UIEdgeInsets insets);
 
 /**
 * Replace one or more properties of a rect with a tweaked value.
