@@ -2,6 +2,13 @@
 #import "UIView+EEEManualLayout.h"
 #import "EEEManualLayout.h"
 
+CGFloat EEECGFloatValueForNumber(NSNumber *number) {
+#if CGFLOAT_IS_DOUBLE
+    return [number doubleValue];
+#else
+    return [number floatValue];
+#endif
+}
 @implementation UIView (TTTLayout)
 
 - (void)eee_setOrigin:(CGPoint)origin
@@ -118,7 +125,7 @@
     {
         if ([subview isKindOfClass:[NSNumber class]])
         {
-            rowFrame.origin.y += [(NSNumber *)(id)subview floatValue];
+            rowFrame.origin.y += EEECGFloatValueForNumber((id)subview);
             continue;
         }
 
