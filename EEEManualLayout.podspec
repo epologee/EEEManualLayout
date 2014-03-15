@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = "EEEManualLayout"
-  s.version          = "0.1.1"
+  s.version          = "0.1.2"
   s.summary          = "For when Cocoa's Auto Layout is a bit too ... automatic!"
   s.homepage         = "https://github.com/epologee/EEEManualLayout"
   s.license          = 'MIT'
